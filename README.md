@@ -1,5 +1,12 @@
 # WATER: Wide-swath AlTimetry for Eddy Reconstruction (WP2)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/76ccb767-05a2-409e-a907-fe9a950b3888" height="300" alt="CMCC Logo">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/1f29cbbb-a75c-4877-b80c-05839223e370" height="300" alt="NERSC Logo">
+</p>
+
+
 This repository contains the Machine Learning implementation for **Work Package 2** of the [WATER project](https://www.cmcc.it/projects/esa_water-wide-swath-altimetry-for-eddy-reconstruction), funded by the European Space Agency (ESA).
 
 The goal of this package is to transition from physical-constraint-based detection to a data-driven approach using Deep Learning (U-Net) to identify "active" mesoscale eddies.
