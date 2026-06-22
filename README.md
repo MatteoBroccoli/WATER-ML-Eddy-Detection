@@ -64,24 +64,21 @@ python -c "import tensorflow as tf; print(tf.__version__)"
 
 All three files are archived on Zenodo.
 
-> **TODO:** Replace the placeholder URL below with the actual Zenodo DOI/URL
-> once the upload is complete.
-
 ```bash
 # Create the model directory
 mkdir -p /path/to/your/model_dir/cp/
 
 # Download and unzip the model checkpoint
-wget -O model_weights.zip https://zenodo.org/record/XXXXXXX/files/swot_tr014_checkpoint.zip
+wget -O model_weights.zip https://zenodo.org/record/20797985/files/swot_tr014_checkpoint.zip
 unzip model_weights.zip -d /path/to/your/model_dir/cp/
 
 # Download the normalisation parameters
 wget -O /path/to/your/model_dir/norm_params.npz \
-    https://zenodo.org/record/XXXXXXX/files/norm_params.npz
+    https://zenodo.org/record/20797985/files/norm_params.npz
 
 # Download the mesh mask
 wget -O /path/to/your/MESH/meshmask.nc \
-    https://zenodo.org/record/XXXXXXX/files/meshmask.nc
+    https://zenodo.org/record/20797985/files/meshmask.nc
 ```
 
 The unzipped checkpoint folder should contain:
