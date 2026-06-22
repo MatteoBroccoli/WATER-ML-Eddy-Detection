@@ -172,8 +172,3 @@ The three output variables already exist in the file from a previous run.
 Either delete them first or use a fresh copy of the input file.
 
 ---
-
-## Contact
-
-Matteo Broccoli — CMCC  
-`mb31322 [at] cmcc [dot] it`
