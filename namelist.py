@@ -30,19 +30,6 @@ CHECKPOINT_DIR = MODEL_DIR + "cp/"
 VARDYN_FILE = "/work/cmcc/mb31322/water/vardyn/VarDyn_Agulhas_20240601.nc"
 
 # -----------------------------------------------------------------------------
-# MODEL SETTINGS
-# -----------------------------------------------------------------------------
-
-# Input spatial dimensions — must match the trained model. Do not change.
-MODEL_INPUT_ROWS     = 1701
-MODEL_INPUT_COLS     = 3600
-MODEL_INPUT_CHANNELS = 6
-
-# Number of U-Net output channels and stages
-MODEL_OUTPUT_CHANNELS = 2
-MODEL_NUM_STAGES      = 3
-
-# -----------------------------------------------------------------------------
 # DETECTION SETTINGS
 # -----------------------------------------------------------------------------
 
@@ -55,10 +42,3 @@ SST_THRESHOLD = 0.1
 
 # Minimum eddy area (km²) — eddies smaller than this are discarded entirely.
 AREA_THRESHOLD = 300
-
-# -----------------------------------------------------------------------------
-# MISC
-# -----------------------------------------------------------------------------
-
-# Random seed for TensorFlow (reproducibility)
-TF_SEED = 8
