@@ -45,7 +45,7 @@ from detection_utils import (
 
 
 def main():
-    tf.random.set_seed(cfg.TF_SEED)
+    tf.random.set_seed(8)
 
     vardyn_dir  = os.path.dirname(cfg.VARDYN_FILE)
     output_stem = os.path.splitext(os.path.basename(cfg.VARDYN_FILE))[0]
@@ -73,7 +73,7 @@ def main():
             [sla, sst, ugos, vgos],
             lat_global, lon_global,
             lat_reg, lon_reg,
-            cfg.MODEL_INPUT_ROWS, cfg.MODEL_INPUT_COLS,
+            1701, 3600,
         )
     del sla, sst, ugos, vgos
     gc.collect()
@@ -88,10 +88,10 @@ def main():
     # ------------------------------------------------------------------
     print("Building model and loading pre-trained weights...")
     model = get_unet(
-        input_shape=(cfg.MODEL_INPUT_ROWS, cfg.MODEL_INPUT_COLS,
-                     cfg.MODEL_INPUT_CHANNELS),
-        output_channels=cfg.MODEL_OUTPUT_CHANNELS,
-        num_stages=cfg.MODEL_NUM_STAGES,
+        input_shape=(1701, 3600,
+                     6),
+        output_channels=2,
+        num_stages=3,
     )
     model.compile(
         optimizer=tf.keras.optimizers.Adam(learning_rate=1e-5),
